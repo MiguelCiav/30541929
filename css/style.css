@@ -1,0 +1,147 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* INDEX.HTML */
+
+/* LISTAS */
+
+ul {
+  margin-top: 0;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+li::marker {
+  content: "";
+}
+
+/* NAV */
+
+nav {
+  background-color: cornflowerblue;
+  padding: 16px;
+}
+
+nav p {
+  color: white;
+}
+
+button {
+  color: cornflowerblue;
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+}
+
+input {
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+}
+
+.logo p {
+  display: inline;
+  font-size: 20px;
+}
+
+.logo p.UCV-text {
+  font-size: 12px;
+}
+
+/* SECTION */
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  align-items: center;
+}
+
+section img {
+  height: 160px;
+  margin-bottom: 8px;
+}
+
+section ul {
+  max-width: 800px;
+}
+
+section li {
+  min-width: 160px;
+  padding: 12px;
+  background-color: rgb(238, 244, 255);
+  margin: 8px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+section li p {
+  color: cornflowerblue;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 16px;
+  background-color: cornflowerblue;
+  padding: 16px;
+}
+
+/* PERFIL.HTML */
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-title {
+  margin-bottom: 12px;
+  color: orange;
+}
+
+.description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 12px;
+}
+
+.student-photo {
+  width: 300px;
+  height: 400px;
+  border-radius: 150px 0px 0px 0px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.container {
+  border: solid 1px black;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin-top: 20px;
+  margin-right: 15px;
+  min-width: 300px;
+  max-width: 750px;
+}
+
+.mail-link {
+  color: orange;
+}
+
+.mail-link:visited {
+  color: red;
+}
+
+.qa {
+    margin-bottom: 12px;
+}
+
+.qa p {
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
