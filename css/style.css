@@ -26,7 +26,12 @@ li::marker {
 
 nav {
   background-color: cornflowerblue;
-  padding: 16px;
+}
+
+.greeting {
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+  padding: 16px 24px 16px 24px;
 }
 
 nav p {
@@ -70,7 +75,7 @@ section img {
 }
 
 section ul {
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 section li {
@@ -88,6 +93,8 @@ section li p {
 /* FOOTER */
 
 footer {
+  display: flex;
+  justify-content: center;
   margin-top: 16px;
   background-color: cornflowerblue;
   padding: 16px;
@@ -144,4 +151,21 @@ footer {
 .qa p {
   margin-bottom: 8px;
   margin-right: 8px;
+}
+
+/* ANIMACIONES */
+
+/* zoom y rotación */
+@keyframes focused {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(3deg) scale(1.05);
+    background-color: #99c5dd;
+  }
+}
+section ul li:hover {
+  animation: focused 0.5s;
+  animation-fill-mode: forwards;
 }
