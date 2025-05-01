@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="profile">
-    <img class="student-photo" src="30541929.jpg" alt="Foto de Miguel" />
+    <div class="photo-container">
+      <img
+        srcset="30541929Pequena.png 481w, 30541929Grande.png 962w"
+        sizes="(max-width: 600px) 481px, 962px"
+        src="30541929Grande.png"
+        alt="Foto de Miguel"
+      />
+    </div>
     <div class="container">
       <h1 class="profile-title">Miguel Ciavato</h1>
       <p class="description">
@@ -32,7 +39,9 @@
         </tr>
         <tr>
           <td><p>Mi libro favorito es:</p></td>
-          <td><p>Amor en los tiempos de Cólera, de Gabriel García Márquez</p></td>
+          <td>
+            <p>Amor en los tiempos de Cólera, de Gabriel García Márquez</p>
+          </td>
         </tr>
         <tr>
           <td><p>Estilo de música preferida es:</p></td>
@@ -49,7 +58,9 @@
       </table>
       <p class="contact">
         Si necesitan comunicarse conmigo me pueden escribir a:
-        <a class="mail-link" href="mailto:miguelciavato@gmail.com">miguelciavato@gmail.com</a>
+        <a class="mail-link" href="mailto:miguelciavato@gmail.com"
+          >miguelciavato@gmail.com</a
+        >
       </p>
     </div>
   </body>

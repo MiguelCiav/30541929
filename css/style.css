@@ -2,21 +2,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* INDEX.HTML */
 
 /* LISTAS */
-
-ul {
-  margin-top: 0;
-  text-align: center;
-}
-
-ul li {
-  display: inline-block;
-  padding: 0 20px;
-}
 
 li::marker {
   content: "";
@@ -26,6 +17,13 @@ li::marker {
 
 nav {
   background-color: cornflowerblue;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
 }
 
 .greeting {
@@ -53,20 +51,18 @@ input {
 
 .logo p {
   display: inline;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .logo p.UCV-text {
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 /* SECTION */
 
 section {
-  display: flex;
-  justify-content: center;
   margin-top: 16px;
-  align-items: center;
+  padding: 0px 16px 0px 16px;
 }
 
 section img {
@@ -74,20 +70,41 @@ section img {
   margin-bottom: 8px;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 section ul {
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 16px;
 }
 
 section li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-width: 160px;
   padding: 12px;
   background-color: rgb(238, 244, 255);
-  margin: 8px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 section li p {
   color: cornflowerblue;
+}
+
+section li a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+section li a:visited p{
+  color: rgb(63, 93, 148)
 }
 
 /* FOOTER */
@@ -118,12 +135,21 @@ footer {
   margin-bottom: 12px;
 }
 
-.student-photo {
-  width: 300px;
-  height: 400px;
+.photo-container {
+  min-width: 300px;
+  max-width: 300px;
   border-radius: 150px 0px 0px 0px;
   margin-top: 20px;
   margin-right: 10px;
+  overflow: hidden;
+  margin-left: 12px;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .container {
@@ -131,7 +157,7 @@ footer {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
   padding: 1rem;
   margin-top: 20px;
-  margin-right: 15px;
+  margin-right: 12px;
   min-width: 300px;
   max-width: 750px;
 }
@@ -145,12 +171,24 @@ footer {
 }
 
 .qa {
-    margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question p:first-child {
+  margin-right: 12px;
 }
 
 .qa p {
   margin-bottom: 8px;
-  margin-right: 8px;
 }
 
 /* ANIMACIONES */
@@ -168,4 +206,76 @@ footer {
 section ul li:hover {
   animation: focused 0.5s;
   animation-fill-mode: forwards;
+}
+
+/* INDEX */
+
+@media (max-width: 480px) {
+  section ul {
+    grid-template-columns: repeat(1, 200px);
+    grid-gap: 16px;
+  }
+  section li {
+    min-width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li form {
+    padding: 16px;
+  }
+  .greeting {
+    margin: 4px;
+    padding: 8px;
+  }
+  .logo {
+    margin: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  section ul {
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 16px;
+  }
+  section li {
+    min-width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li form {
+    padding: 16px;
+  }
+  .greeting {
+    margin: 4px;
+    padding: 8px;
+  }
+  .logo {
+    margin: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  section ul {
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 16px;
+  }
+  section li {
+    min-width: 100%;
+  }
+}
+
+/* PERFIL */
+
+@media (max-width: 700px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    margin: 16px;
+  }
 }
