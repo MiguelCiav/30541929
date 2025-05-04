@@ -1,0 +1,18 @@
+const perfil = {
+	"nombre":"Miguel Ciavato",
+	"descripcion":"Soy estudiante de 6to semestre de la carrera de computación de la UCV.
+          Me apasiona programar, aunque también disfruto de diseñar,
+          especialmente haciendo flyers para redes sociales y algún que otro
+          logo. Espero poder profundizar en el desarrollo web y diseño UI/UX
+          para dedicarme a ello en el futuro, si aún la IA no me ha reemplazado
+          (jaja).",
+	"color": "Verde",
+	"libro": ["Amor en los tiempos del cólera - Gabriel García Márquez"],
+	"musica": ["El rock, especialmente el grunge, o rock en español"],
+	"video_juego":["Balatro", "Geometry Dash"],
+	"lenguajes":["Java","Javascript","Haskell","C", "C++","Python"],
+	"email":"miguelciavato@gmail.com",
+	"ci":"30541929",
+	"genero":"masculino",
+	"fecha_nacimiento":"17/11/2003"
+}
