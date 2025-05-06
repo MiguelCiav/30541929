@@ -84,6 +84,7 @@ section ul {
 }
 
 section li {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
