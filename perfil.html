@@ -10,43 +10,44 @@
       href="http://www.ciens.ucv.ve/portalasig2/favicon.ico"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="conf/configES.json"></script>
+    <script src="datos/index.json"></script>
+    <script src="js/perfil.js"></script>
   </head>
   <body class="profile">
     <div class="photo-container">
-      <img/>
+      <img id="student-img"/>
     </div>
     <div class="container">
-      <h1 class="profile-title"></h1>
+      <h1 id="student-name" class="profile-title"></h1>
       <p class="description">
-        <i></i>
+        <i id="student-description"></i>
       </p>
       <table class="qa">
         <tr>
-          <td><p></p></td>
-          <td><p></p></td>
+          <td><p>Mi color favorito es:</p></td>
+          <td><p id="student-color-r"></p></td>
         </tr>
         <tr>
-          <td><p></p></td>
-          <td>
-            <p></p>
-          </td>
+          <td><p>Mi libro favorito es:</p></td>
+          <td><p id="student-book-r"></p></td>
         </tr>
         <tr>
-          <td><p></p></td>
-          <td><p></p></td>
+          <td><p>Mi estilo de música preferida:</p></td>
+          <td><p id="student-music-r"></p></td>
         </tr>
         <tr>
-          <td><p></p></td>
-          <td><p></p></td>
+          <td><p>Videojuegos favoritos:</p></td>
+          <td><p id="student-game-r"></p></td>
         </tr>
         <tr>
-          <td><p></p></td>
-          <td><p></p></td>
+          <td><strong><p>Lenguajes aprendidos</p></strong></td>
+          <td><strong><p id="student-lang-r"></p></strong></td>
         </tr>
       </table>
       <p class="contact">
         Si necesitan comunicarse conmigo me pueden escribir a:
-        <a class="mail-link"></a>
+        <a id="student-email" class="mail-link"></a>
       </p>
     </div>
   </body>
