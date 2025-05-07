@@ -104,9 +104,17 @@ section li a {
   color: cornflowerblue;
 }
 
-section li a:visited p{
-  color: rgb(63, 93, 148)
+section li a:visited{
+  color: rgb(43, 64, 104)
 }
+
+#no-found-msg {
+  justify-self: center;
+  grid-column: 1/4;
+  font-size: large;
+  color: cornflowerblue;
+}
+
 
 /* FOOTER */
 

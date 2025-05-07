@@ -11,13 +11,18 @@ function load_profile() {
         perfilJSON.src = `${perfil_index["ci"]}/perfil.json`;
         perfilJSON.type = "text/javascript";
         document.head.insertBefore(perfilJSON, document.head.firstChild);
+        let email_tag = null;
+        let email_text = null;
 
         perfilJSON.onload = function() {
             document.getElementById("student-img").src = perfil_index["imagen"];
             document.getElementById("student-name").innerHTML = perfil["nombre"];
             document.getElementById("student-description").innerHTML = perfil["descripcion"];
-            document.getElementById("student-email").innerHTML = perfil["email"];
-            document.getElementById("student-email").href = `mailto:${perfil["email"]}`;
+            
+            email_tag = `<a id="student-email" class="mail-link" href="mailto:${perfil["email"]}">${perfil["email"]}</a>`
+            email_text = config["email"];
+            email_text = email_text.replace("[email]", email_tag);
+            document.getElementById("email-text").innerHTML = email_text;
 
             document.getElementById("student-color").innerHTML = config["color"] + ":";
             document.getElementById("student-color-r").innerHTML = perfil["color"];
