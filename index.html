@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="http://www.ciens.ucv.ve/portalasig2/favicon.ico"
-    />
-    <script src="datos/index.json"></script>
-    <script src="js/index.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li class="logo">
-            <p id="logo-1">ATI</p>
-            <p class="UCV-text">[UCV]</p>
-            <p id="logo-2">2025-1</p>
-          </li>
-          <li>
-            <p class="greeting"></p>
-          </li>
-          <li>
-            <form onsubmit="return false;">
-              <input id="search-input" type="text" placeholder="Nombre..." />
-              <button id="search-button" type="submit">Buscar</button>
-            </form>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section>
-      <ul id="persons-list"></ul>
-    </section>
-    <footer>
-      <p class="copyright"></p>
-    </footer>
-  </body>
+<html>
+<head>
+    <title>Mi SPA con WSGI</title>
+    <link rel="stylesheet" href="/ATI/style.css">
+    <script src="/ATI/app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>¡La aplicación funciona correctamente!</p>
+    </div>
+    
+    <script>
+        // Ejemplo de consumo de JSON con estructura de cédula
+        fetch('/ATI/api/30541929/perfil.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Datos recibidos:', data);
+                // Actualizar la interfaz con los datos
+                document.getElementById('app').innerHTML = `
+                    <h1>Perfil de ${data.nombre}</h1>
+                    <p>Cédula: ${data.cedula}</p>
+                    <p>Email: ${data.email}</p>
+                `;
+            });
+    </script>
+</body>
 </html>
