@@ -27,7 +27,7 @@ function loadFirstConfig() {
     });
 }
 
-function loadProfile(CI) {
+function loadProfile(CI, profileName) {
   return function() {
     const persons_list = document.getElementById("persons-list");
     const profile = document.getElementById("profile");
@@ -85,6 +85,7 @@ function loadProfile(CI) {
         console.error("Error al cargar imagen del perfil:", error);
       }
     );
+    profileName.setAttribute("style", "color: rgb(43, 64, 104)");
   }
 }
 
@@ -99,7 +100,7 @@ function loadPersons(lista_perfiles) {
     let profile = document.createElement("li");
     let profileName = document.createElement("a");
     let profileImg = document.createElement("img");
-    profileName.onclick = loadProfile(perfil["ci"]);
+    profileName.onclick = loadProfile(perfil["ci"], profileName);
     profileName.innerHTML = `${perfil["nombre"]}`;
     profileImg.setAttribute("src", `/ATI/api/${perfil["imagen"]}`);
     profile.appendChild(profileImg);

@@ -17,6 +17,12 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Instalación de Git para clonar el repositorio
+RUN apt-get update && apt-get install -y \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 # Crear y activar entorno virtual
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
@@ -53,7 +59,7 @@ RUN echo "<VirtualHost *:80>\n\
     </Directory>\n\
 </VirtualHost>" > /etc/apache2/sites-available/000-default.conf
 
-COPY . /var/www/html/ATI/
+RUN git clone https://github.com/MiguelCiav/30541929.git /var/www/html/ATI/
 
 # Habilitar módulo WSGI
 RUN a2enmod wsgi
