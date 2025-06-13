@@ -114,7 +114,7 @@ section li a {
   color: cornflowerblue;
 }
 
-section li a:visited{
+section ul li a:visited{
   color: rgb(43, 64, 104)
 }
 
