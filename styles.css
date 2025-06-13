@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 
-/* INDEX.HTML */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
 
 /* LISTAS */
 
@@ -14,6 +19,10 @@ li::marker {
 }
 
 /* NAV */
+
+#logo {
+  cursor: pointer;
+}
 
 nav {
   background-color: cornflowerblue;
@@ -100,6 +109,7 @@ section li p {
 }
 
 section li a {
+  cursor: pointer;
   text-decoration: none;
   color: cornflowerblue;
 }
@@ -115,7 +125,6 @@ section li a:visited{
   color: cornflowerblue;
 }
 
-
 /* FOOTER */
 
 footer {
@@ -129,7 +138,7 @@ footer {
 /* PERFIL.HTML */
 
 .profile {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
 }
@@ -148,7 +157,6 @@ footer {
   min-width: 300px;
   max-width: 300px;
   border-radius: 150px 0px 0px 0px;
-  margin-top: 20px;
   margin-right: 10px;
   overflow: hidden;
   margin-left: 12px;
@@ -165,7 +173,6 @@ footer {
   border: solid 1px black;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
   padding: 1rem;
-  margin-top: 20px;
   margin-right: 12px;
   min-width: 300px;
   max-width: 750px;
