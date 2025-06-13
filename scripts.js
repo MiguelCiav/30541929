@@ -158,3 +158,6 @@ fetch("/ATI/api/index.json")
 
 const logo = document.getElementById("logo");
 logo.onclick = loadHome
+
+const profile = document.getElementById("profile");
+profile.setAttribute("style", "display: none;");
